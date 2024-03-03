@@ -1,15 +1,17 @@
 {
-  "name": "testwork",
+  "name": "multiapps",
   "version": "1.0.0",
-  "description": "testwork",
+  "description": "multiapps",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "npx nodemon",
     "build": "rimraf ./build && npx tsc",
-    "start": "npm run build && node build/index.js"
+    "start": "npm run build && npm run --",
+    "app1": "node ./dist/app1/src/index.js",
+    "app2": "node ./dist/app2/src/index.js"
   },
-  "author": "",
+  "author": "Arsen",
   "license": "ISC",
   "dependencies": {
     "rimraf": "^5.0.5"
